@@ -1,19 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById('myForm');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Form Submission Example</h1>
+    <form id="myForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        //Add Varibles from index.html (hint: Use document.get function)
-        const name = document.getElementById("name").value;
-        const message = document.getElementById("name").value;
-        const email = document.getElementById("name").value;
-
-        if (name && email && message) {
-            alert(`Form submitted successfully!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
-        } else {
-            alert('Please fill all the fields');
-        }
-    });
-});
-//Add additional fields
+    <script src="script.js"></script>
+</body>
+</html>
